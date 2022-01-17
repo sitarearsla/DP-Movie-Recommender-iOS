@@ -60,13 +60,13 @@ class RecommendationViewController: UIViewController {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.topAnchor.constraint(equalTo: pageTitle.bottomAnchor).isActive = true
         collectionView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -45).isActive = true
+        collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -45).isActive = true
         collectionView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         view.addSubview(replayButton)
         replayButton.translatesAutoresizingMaskIntoConstraints = false
         replayButton.topAnchor.constraint(equalTo: collectionView.bottomAnchor).isActive = true
         replayButton.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        replayButton.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        replayButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
         replayButton.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
     }
     

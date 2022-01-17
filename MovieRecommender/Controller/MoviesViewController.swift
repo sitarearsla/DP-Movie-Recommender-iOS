@@ -98,14 +98,14 @@ class MoviesViewController: UIViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.topAnchor.constraint(equalTo: navigationBar.bottomAnchor).isActive = true
         tableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -45).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50).isActive = true
         tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         tableView.register(MovieTableViewCell.self, forCellReuseIdentifier: MovieTableViewCell.identifier)
         view.addSubview(recommendButton)
         recommendButton.translatesAutoresizingMaskIntoConstraints = false
         recommendButton.topAnchor.constraint(equalTo: tableView.bottomAnchor).isActive = true
         recommendButton.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        recommendButton.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        recommendButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
         recommendButton.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         alert.view.tintColor = UIColor.black
         loadingIndicator.hidesWhenStopped = true
@@ -156,7 +156,6 @@ extension MoviesViewController: UISearchBarDelegate {
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         searching = false
-        searchBar.resignFirstResponder()
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
@@ -172,6 +171,7 @@ extension MoviesViewController: UISearchBarDelegate {
         if searchText.isEmpty {
             searching = false
             tableView.reloadData()
+            searchBar.resignFirstResponder()
             return
         }
         filtered = movies
