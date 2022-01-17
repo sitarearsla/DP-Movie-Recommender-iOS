@@ -83,16 +83,40 @@
 				361754C4278E0D710036B478 /* Assets.xcassets */,
 				361754C6278E0D710036B478 /* LaunchScreen.storyboard */,
 				361754C9278E0D710036B478 /* Info.plist */,
-				361754D7278E2B420036B478 /* MoviesViewController.swift */,
-				361754DE278E2B910036B478 /* MovieDataSource.swift */,
+				3622F5E92794F920009B3C1D /* Controller */,
+				3622F5EA2794F938009B3C1D /* Model */,
 				368C49AE2790DF9E00071B9F /* movies.csv */,
-				368C49B02790E0B100071B9F /* Movie.swift */,
-				368C49B22790E11B00071B9F /* MovieFactory.swift */,
-				364BAA462790EDA3003DAF0E /* MovieTableViewCell.swift */,
-				3622F5E527946344009B3C1D /* RecommendationViewController.swift */,
-				3622F5E72794B373009B3C1D /* RecommendationCollectionViewCell.swift */,
+				3622F5EB2794F945009B3C1D /* View */,
 			);
 			path = MovieRecommender;
+			sourceTree = "<group>";
+		};
+		3622F5E92794F920009B3C1D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3622F5E527946344009B3C1D /* RecommendationViewController.swift */,
+				361754D7278E2B420036B478 /* MoviesViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3622F5EA2794F938009B3C1D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				361754DE278E2B910036B478 /* MovieDataSource.swift */,
+				368C49B02790E0B100071B9F /* Movie.swift */,
+				368C49B22790E11B00071B9F /* MovieFactory.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3622F5EB2794F945009B3C1D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				364BAA462790EDA3003DAF0E /* MovieTableViewCell.swift */,
+				3622F5E72794B373009B3C1D /* RecommendationCollectionViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		714DE4B6C0A180249EDA2336 /* Pods */ = {
