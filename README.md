@@ -1,5 +1,5 @@
 # Differentially Private Movie Recommender iOS
-## Search Movies
+## Search & Rate Movies 
 <img width="200" alt="movie_search" src="https://user-images.githubusercontent.com/60389066/149854876-61c7a1a9-2d8d-4551-9c1e-d11e2a2d2f85.png">
 
 ## Recommendations from Server
